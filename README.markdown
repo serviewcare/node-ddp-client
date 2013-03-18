@@ -47,8 +47,8 @@ ddpclient.connect(function() {
  * Useful for debugging and learning the ddp protocol
  */
 ddpclient.on('message', function(msg) {
-	console.log("ddp message: " + msg);
-});	
+  console.log("ddp message: " + msg);
+}); 
 
 /* 
  * If you need to do something specific on close or errors.
@@ -70,8 +70,6 @@ Unimplemented Features
   * 'movedBefore'
   * 'error'
   * 'updated'
-* EJSON support
-
 
 
 Thanks
@@ -82,3 +80,4 @@ Many thanks to Alan Sikora, and also Mike Bannister(@possibilities) for the init
 Contributions:
  * Chris Mather (@eventedmind)
  * Thomas Sarlandie (@sarfata)
+ * Mason Gravitt (@emgee3)
