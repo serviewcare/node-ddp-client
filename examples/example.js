@@ -9,12 +9,13 @@ var ddpclient = new DDPClient({
   });
 
 ddpclient.connect(function(error) {
-  console.log('connected!');
 
   if (error) {
     console.log('DDP connection error!');
     return;
   }
+
+  console.log('connected!');
 
   /*
    * Call a Meteor Method 
