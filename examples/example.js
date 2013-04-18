@@ -8,8 +8,13 @@ var ddpclient = new DDPClient({
     auto_reconnect_timer: 500
   });
 
-ddpclient.connect(function() {
+ddpclient.connect(function(error) {
   console.log('connected!');
+  
+  if (error) {
+    console.log('DDP connection error!');
+    return;
+  }
 
   ddpclient.call('test-function', ['foo', 'bar'], function(err, result) {
     console.log('called function, result: ' + result);
