@@ -1,3 +1,6 @@
+vnext
+  - added EJSON (http://docs.meteor.com/#ejson) support.
+
 0.3.2 - 2013-04-08
   - fixed bug where client would reconnect when closing (@tarangp)
 
