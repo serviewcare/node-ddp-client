@@ -16,10 +16,18 @@ ddpclient.connect(function(error) {
     return;
   }
 
-  ddpclient.call('test-function', ['foo', 'bar'], function(err, result) {
-    console.log('called function, result: ' + result);
+  /*
+   * Call a Meteor Method 
+   * Equivalent to Meteor.call('meteor-method', ['foo','bar'] ); 
+   */
+  ddpclient.call('meteor-method', ['foo', 'bar'], function(err, result) {
+    console.log('called method, result: ' + result);
   });
 
+  /*
+   * Subscribe to a Meteor Collection 
+   * Equivalent to Collection.subscribe('posts', function () { ... 
+   */
   ddpclient.subscribe('posts', [], function() {
     console.log('posts complete:');
     console.log(ddpclient.collections.posts);
