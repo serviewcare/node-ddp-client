@@ -49,7 +49,7 @@ ddpclient.connect(function(error) {
 
   /*
    * Subscribe to a Meteor Collection 
-   * Equivalent to Collection.subscribe('posts', function () { ... 
+   * Equivalent to Meteor.subscribe('posts', function () { ... 
    */
   ddpclient.subscribe('posts', [], function() {
     console.log('posts complete:');
